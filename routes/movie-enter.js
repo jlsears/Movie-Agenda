@@ -26,4 +26,5 @@ var sendError = function (req, res, err, message) {
 // Send the movies to see list back to the client
 
 
+// module.exports = router; //change to app was router
 
