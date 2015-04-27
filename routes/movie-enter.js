@@ -3,7 +3,7 @@ var express = require('express');
 var router = express.Router();
 var movieList = [];
 var TheMovie = require('../models/themovie');
-var User = require('../models/user');
+var User = require('../models/users');
 
 
 // Send the error message back to the client

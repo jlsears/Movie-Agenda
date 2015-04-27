@@ -7,7 +7,7 @@ var movieSchema = mongoose.Schema({
     theater: {type: String, required: false, default: '' },
     fellow_moviegoers: {type: String, required: false, default: '' },
     date_viewed: {type: Date, required: false, default: Date.now },
-    seen: {type: Dropdown, required: true, default: Date.now },
+    seen: {type: Boolean, required: true, default: Date.now },
     favorite: {type: Boolean, required: true, default: false },
     user: {type: String, required: true}
 });

@@ -1,10 +1,10 @@
-// var mongoose = require('mongoose');
+var mongoose = require('mongoose');
 
-// var userSchema = mongoose.Schema({
-//     username: {type: String, required: true, default: ''},
-//     password: {type: String, required: true, default: ''}
-// });
+var userSchema = mongoose.Schema({
+    username: {type: String, required: true, default: ''},
+    password: {type: String, required: true, default: ''}
+});
 
-// var User = mongoose.model('User', userSchema);
+var User = mongoose.model('User', userSchema);
 
-// module.exports = User; or Users
+module.exports = User; //or Users
