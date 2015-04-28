@@ -3,7 +3,7 @@ var express = require('express');
 var app = express.Router();
 var UserController = require("../userController");
 var UserModel = require("../models/user");
-// var Movie = require("../models/movie");
+var Movie = require("../models/movieenter");
 
 // Send the error message back to the client
 var sendError = function (req, res, err, message) {
@@ -17,19 +17,19 @@ var sendError = function (req, res, err, message) {
   });
 };
 
-// Retrieve all tasks for the current user
-var getUserTasks = function (userId) {
+// Retrieve all movies for the current user
+var getUserMovies = function (userId) {
   var deferred = Q.defer();
 
   console.log('Another promise to let the calling function know when the database lookup is complete');
 
-  Movie.find({user: userId}, function (err, tasks) {
+  Movie.find({user: userId}, function (err, movies) {
     if (!err) {
-      console.log('Tasks found = ' + tasks.length);
-      console.log('No errors when looking up tasks. Resolve the promise (even if none were found).');
-      deferred.resolve(tasks);
+      console.log('Movies found = ' + movies.length);
+      console.log('No errors when looking up movies. Resolve the promise (even if none were found).');
+      deferred.resolve(movies);
     } else {
-      console.log('There was an error looking up tasks. Reject the promise.');
+      console.log('There was an error looking up movies. Reject the promise.');
       deferred.reject(err);
     }
   })
@@ -73,11 +73,11 @@ app.post("/login", function (req, res) {
 
       console.log('Ok, now we are back in the route handling code and have found a user');
       console.log('validUser',validUser);
-      console.log('Find any tasks that are assigned to the user');
+      console.log('Find any movies that are assigned to the user');
 
-      // Now find the tasks that belong to the user
-      getUserTasks(validUser._id)
-        .then(function (tasks) {
+      // Now find the movies that belong to the user
+      getUserMovies(validUser._id)
+        .then(function (movies) {
           // Render the movie list
           res.redirect("/movie/list");
         })
@@ -97,10 +97,10 @@ app.get("/profile", function (req, res) {
   var user = UserController.getCurrentUser();
 
   if (user !== null) {
-    getUserTasks(user._id).then(function (tasks) {
+    getUserMovies(user._id).then(function (movies) {
       res.render("userProfile", {
         username: user.username,
-        tasks: tasks
+        movies: movies
       });
     });
   } else {
