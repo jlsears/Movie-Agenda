@@ -1,4 +1,4 @@
-var UserModel = require("./models/users");
+var UserModel = require("./models/user");
 var Q = require("q");
 
 var User = function () {
