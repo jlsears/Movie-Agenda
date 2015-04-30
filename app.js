@@ -19,7 +19,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-var db = require('./db')
+var db = require('./db');
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 // var movie = require('./routes/movie')
@@ -28,6 +29,11 @@ var users = require('./routes/users');
 app.use('/', routes);
 app.use('/user', users);
 // app.use('/movie', movie);
+
+// Set up route handlers for the root URL
+var root_routes = require('./routes/index');
+app.use('/', root_routes);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
