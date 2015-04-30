@@ -33,7 +33,7 @@ app.use('/movie', movie);
 // Set up route handlers for the root URL
 var root_routes = require('./routes/index');
 app.use('/', root_routes);
-
+console.log("hello");
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
