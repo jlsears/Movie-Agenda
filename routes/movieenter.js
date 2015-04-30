@@ -67,7 +67,7 @@ router.get('/:id', function (req, res) {
     res.redirect("/");
   }
 
-  Themovie.find({ _id: req.params.id }, function (err, item) {
+  TheMovie.find({ _id: req.params.id }, function (err, item) {
     var thisItem = item[0];
 
     // Was there an error when retrieving?
