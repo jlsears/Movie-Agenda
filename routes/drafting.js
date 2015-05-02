@@ -38,9 +38,9 @@ var sendMovieList = function (req, res, next) {
       console.log(err);
       sendError(req, res, err, "Could not get task list");
     } else {
-      res.render("movielist", {
-        title: "List of movies",
-        message: "Things you've seen and need to see",
+      res.render("movieList", {
+        title: "List of tasks",
+        message: "Things you still need to do",
         welcome: "Welcome, film fan!",
         tasks: tasks
       });
@@ -67,7 +67,7 @@ router.get('/:id', function (req, res) {
     res.redirect("/");
   }
 
-  TheMovie.find({ _id: req.params.id }, function (err, item) {
+  Themovie.find({ _id: req.params.id }, function (err, item) {
     var thisItem = item[0];
 
     // Was there an error when retrieving?

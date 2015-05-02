@@ -3,7 +3,7 @@ var express = require('express');
 var app = express.Router();
 var UserController = require("../userController");
 var UserModel = require("../models/user");
-var Movie = require("../models/movieenter");
+var Movie = require("../models/movie");
 
 // Send the error message back to the client
 var sendError = function (req, res, err, message) {
