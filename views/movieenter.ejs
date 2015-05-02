@@ -7,9 +7,9 @@
   <body>
     <h1>Enter a New Film</h1>
     <div class="entering-data">
-      <form method="POST" action="/" id="movieForm">
+      <form method="POST" action="/movie" id="movieForm">
 
-        <input type="hidden" name="db_id" value="<%= todo._id %>">
+        <input type="hidden" name="db_id" value="<%= themovie._id %>">
 
         <div class="formfield sides-cat">
           <div class="formfield--prompt">Title:</div>
@@ -40,7 +40,7 @@
           <div class="formfield--prompt">Date Viewed:</div>
           <input type="text" id="meDate"
             name="date_seen"
-            value="<%= themovie.date_seen.getMonth() + 1 %> / <%= themovie.date_seen.getDate() %> / <%= themovie.date_seen.getFullYear() %>">
+            value="">
         </div>
 
        <!--  <div class="btn-group">
