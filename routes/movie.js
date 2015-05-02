@@ -9,7 +9,7 @@ var User = require('../models/user');
 // B. Send the movie list back to the client
 
 var sendMovieList = function (req, res, next) {
-  TheMovie.find({}, function (err, tasks) {  //What's stored in tasks? An array
+  TheMovie.find({}, function (err, movies) {  //What's stored in tasks? An array
 
     //Swap out the user._id for user.username in each task
 
@@ -17,21 +17,21 @@ var sendMovieList = function (req, res, next) {
       console.log(theUser.username);
 
     //Loop over the tasks array
-    for (var i = 0; i < tasks.length; i++) {
-      tasks[i].user = theUser.username;  //if you crazily wanted to display password instead, theUser.password
+    for (var i = 0; i < movies.length; i++) {
+      movies[i].user = theUser.username;  //if you crazily wanted to display password instead, theUser.password
     }
 
-    console.log('tasks',tasks);
+    console.log('movies',movies);
 
     if (err) {
       console.log(err);
-      sendError(req, res, err, "Could not get task list");
+      sendError(req, res, err, "Could not get movies list");
     } else {
       res.render("movielist", {
-        title: "List of tasks",
+        title: "List of movies",
         message: "Look at what you've been up to here",
         welcome: "Welcome, film fan!",
-        tasks: tasks
+        movies: movies
       });
     }
   });
@@ -42,6 +42,7 @@ var sendMovieList = function (req, res, next) {
 // C. Handle a GET request from the client to /movieenter/list
 router.get('/list', function (req,res,next) {
   // Is the user logged in?
+  console.log("line 45 here");
   if (UserController.getCurrentUser() === null) {
     res.redirect("/");
   }
@@ -98,7 +99,7 @@ router.post('/', function (req, res, next) {
           if (err) {
             sendError(req, res, err, "Could not save task with updated information");
           } else {
-            res.redirect('/movie');
+            res.redirect('/movie/list');
           }
         });
       }
@@ -117,13 +118,13 @@ router.post('/', function (req, res, next) {
     console.log('theFormPostData',theFormPostData);
 
 
-    var mytodo = new Todo(theFormPostData);
+    var mymovie = new TheMovie(theFormPostData);
 
-    mymovieenter.save(function (err, todo) {
+    mymovie.save(function (err, mymovie) {
       if (err) {
         sendError(req, res, err, "Failed to save task");
       } else {
-        res.redirect('/movie');
+        res.redirect('/movie/list');
       }
     });
   }
