@@ -8,16 +8,25 @@
 
   </head>
   <body >
-    <a href="/movie">Create a new Movie Agenda</a> | <a href="/movie/list">List Movies</a>
-    <P>
-    <div>
-      <i class="fa fa-user"></i>
-      Username: <%= username %>
-    </div>
-    <div>
-      <i class="fa fa-film"></i>
-      Number of Movie Agendas: <%= movies.length %>
-    </div>
-    <!-- <img src="../images/film_strip.gif"> -->
+  <div>
+        <a href="/movie">Create a new Movie Agenda</a> | <a href="/movie/list">List Movies</a>
+        <P>
+  </div><!-- nav row -->
+      <div class="row"><!--main body -->
+        <div class="col-md-4" id="left"> <!-- L div -->
+        <div >
+          <i class="fa fa-user"></i>
+          Username: <%= username %>
+        </div>
+        <div>
+          <i class="fa fa-film"></i>
+          Number of Movie Agendas: <%= movies.length %>
+        </div>
+      </div><!--L div -->
+      <div class="col-md-8" id="right">
+         <!-- <img src="../images/film_strip_vertical.gif"> -->
+        <div class="strip"></div>
+      </div><!--R div -->
+      </div><!--main body -->
   </body>
 </html>

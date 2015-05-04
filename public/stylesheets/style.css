@@ -14,3 +14,33 @@ h1 {
 .film{
 	background-image: url("../images/theater-at-night.jpg");
 }
+
+.strip {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: -1;
+    /*background: url(images/theater-at-night.jpg) 0 0 repeat;*/
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+#left {
+    float: left;
+    background-image: url('../images/film_strip_vertical.gif');
+    height: 600px;
+    width: 345px;
+
+}
+
+#rigth{
+    float: right;
+/*    background-image: url('images/film_strip_vertical.gif');*/
+    background-color: red;
+}
