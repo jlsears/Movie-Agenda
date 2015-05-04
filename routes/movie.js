@@ -9,14 +9,14 @@ var User = require('../models/user');
 // B. Send the movie list back to the client
 
 var sendMovieList = function (req, res, next) {
-  TheMovie.find({}, function (err, movies) {  //What's stored in tasks? An array
+  TheMovie.find({}, function (err, movies) {  //What's stored in movies? An array
 
     //Swap out the user._id for user.username in each task
 
       var theUser = UserController.getCurrentUser(); //theUser is the entire object
       console.log(theUser.username);
 
-    //Loop over the tasks array
+    //Loop over the movies array
     for (var i = 0; i < movies.length; i++) {
       movies[i].user = theUser.username;  //if you crazily wanted to display password instead, theUser.password
     }
@@ -59,7 +59,7 @@ router.get('/', function (req, res) {
     res.redirect("/");
   }
 
-  // Send the todo form back to the client
+  // Send the movie form back to the client
   res.render('movieenter', {
     title: 'Title Here',
     themovie: {
@@ -89,10 +89,12 @@ router.post('/', function (req, res, next) {
       } else {
         // Found it. Now update the values based on the form POST data.
         foundmovieenter.title = req.body.title;
-        foundmovieenter.description = req.body.description;
-        foundmovieenter.priority = req.body.priority;
-        foundmovieenter.due_date = req.body.due_date;
-        foundmovieenter.complete = (req.body.complete) ? req.body.complete : false;
+        foundmovieenter.director = req.body.director;
+        foundmovieenter.theater = req.body.theater;
+        foundmovieenter.moviegoers = req.body.moviegoers;
+        foundmovieenter.rating = req.body.rating;
+        foundmovieenter.date_seen = req.body.date_seen;
+        foundmovieenter.favorite = (req.body.complete) ? req.body.favorite : false;
 
         // Save the updated item.
         foundmovieenter.save(function (err, newOne) {
