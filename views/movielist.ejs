@@ -2,6 +2,7 @@
 <html>
   <head>
     <title><%= title %></title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
@@ -9,45 +10,33 @@
     <a class="direction" href="/movie">Enter a new movie</a>
     <h2><%= welcome %></h2>
     <h1><%= message %></h1>
-
-    <% for (var m = 0; m < movies.length; m++) { %>
-      <% var currentMovie = movies[m]; %>
-      <div class="" id="themovie_<%= currentMovie._id %>">
-
-        <div class="">
-          <span class="bold">User:</span> <%= currentMovie.user %>
-        </div>
-
-        <div class="">
-          <span class="bold">Title:</span> <%= currentMovie.title %>
-        </div>
-
-        <div class="">
-          <span class="bold">Director:</span> <%= currentMovie.director %>
-        </div>
-
-        <div class="">
-          <span class="bold">Theater:</span> <%= currentMovie.theater %>
-        </div>
-
-        <div class="">
-          <span class="bold">Fellow Moviegoers:</span> <%= currentMovie.moviegoers %>
-        </div>
-        
-        <div class="">
-          <span class="bold">Date Viewed:</span> <%= currentMovie.date_seen %>
-        </div>
-
-        <div class="">
-          <span class="bold">Rating:</span> <%= currentMovie.rating %>
-        </div>
-
-        <div class="">
-          <span class="bold">Favorite:</span> <%= currentMovie.favorite %>
-        </div>
-      </div>
-    <% } %>
-
+    <table class="table">
+      <thead>
+          <tr>
+              <th data-field="title">Title</th>
+              <th data-field="director">Director</th>
+              <th data-field="theater">Theater</th>
+              <th data-field="moviegoers">Fellow Moviegoers</th>
+              <th data-field="date_seen">Date Viewed</th>
+              <th data-field="rating">Rating</th>
+              <th data-field="favorite">Favorite</th>
+          </tr>
+      </thead>
+      <tbody>
+        <% for (var m = 0; m < movies.length; m++) { %>
+        <% var currentMovie = movies[m]; %>
+          <tr>              
+            <td><%= currentMovie.title %></td>
+            <td><%= currentMovie.director %></td>
+            <td><%= currentMovie.theater %></td>
+            <td><%= currentMovie.moviegoers %></td>
+            <td><%= currentMovie.date_seen %></td>
+            <td><%= currentMovie.rating %></td>
+            <td><%= currentMovie.favorite %></td>
+          </tr>
+        <% } %>
+      </tbody>
+      </table>
 
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>

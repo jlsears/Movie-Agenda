@@ -14,3 +14,30 @@ h1 {
 .film{
 	background-image: url("../images/theater-at-night.jpg");
 }
+
+
+.todo-item {
+  border: 3px solid black;
+  border-radius: 25px;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: white;
+  border-color: green;
+  max-width: 40%;
+}
+
+.listyness {
+  background-color: #d6ebf2;
+  padding: 20px;
+  max-width: 65%;
+  border-radius: 25px;
+  border-style: solid;
+  border-color: white;
+  max-width: 40%;
+  margin-top: 30px;
+}
+
+
+
+
+
