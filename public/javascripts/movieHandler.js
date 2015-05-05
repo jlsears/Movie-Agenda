@@ -7,16 +7,19 @@ $(document).ready(function() {
 
   // User clicked on a delete button
   $(".deleteButton").click(function () {
-    var themovieItemId = $(this)[0].id;
+      alert("ajax works");
+    var movieItemId = $(this)[0].id;
 
     $.ajax({
       url: "/movie",
       method: "DELETE",
       data: {
-        movie_id: themovieItemId
+        movie_id: movieItemId
       },
       success: function (response) {
-        $("#movie_"+themovieItemId).remove();  // Remove the DOM element on success
+        $("#movie_"+movieItemId).remove();  // Remove the DOM element on success
+        alert("Item has been deleted.");
+        console.log("It deleted");
       }
     });
   });
