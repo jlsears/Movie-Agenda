@@ -2,21 +2,21 @@ $(document).ready(function() {
 
   // User clicked on an edit button
   $(".editButton").click(function () {
-    window.location.href = "/todo/" + $(this)[0].id;
+    window.location.href = "/movie/" + $(this)[0].id;
   });
 
   // User clicked on a delete button
   $(".deleteButton").click(function () {
-    var todoItemId = $(this)[0].id;
+    var themovieItemId = $(this)[0].id;
 
     $.ajax({
-      url: "/todo",
+      url: "/movie",
       method: "DELETE",
       data: {
-        todo_id: todoItemId
+        movie_id: themovieItemId
       },
       success: function (response) {
-        $("#todo_"+todoItemId).remove();  // Remove the DOM element on success
+        $("#movie_"+themovieItemId).remove();  // Remove the DOM element on success
       }
     });
   });

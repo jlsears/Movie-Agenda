@@ -1,0 +1,13 @@
+#left {
+  float: left;
+  background-image: url('../images/film_strip_vertical.gif');
+  height: 600px;
+  width: 345px;
+
+}
+
+#rigth{
+    float: right;
+/*    background-image: url('images/film_strip_vertical.gif');*/
+  background-color: red;
+}
