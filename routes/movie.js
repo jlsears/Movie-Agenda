@@ -75,6 +75,23 @@ router.get('/', function (req, res) {
   })
 })
 
+
+// Handle a DELETE request from the client to /todo
+router.delete('/', function (req, res) {
+  Todo.find({ _id: req.body.todo_id })
+      .remove(function (err) {
+
+    // Was there an error when removing?
+    if (err) {
+      sendError(req, res, err, "Could not delete the task");
+
+    // Delete was successful
+    } else {
+      res.send("SUCCESS");
+    }
+  });
+});
+
 // G. Handle a POST request from the client to /movieenter
 router.post('/', function (req, res, next) {
 

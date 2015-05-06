@@ -12,17 +12,17 @@ h1 {
 }
 
 .film{
-  background-image: url("../images/theater-at-night.jpg");
+  background-image: url("images/theater-at-night.jpg");
 }
 
 
-#left {
+/*#left {
   float: left;
   background-image: url('../images/film_strip_vertical.gif');
   height: 600px;
   width: 345px;
 
-}
+}*/
 
 #rigth{
     float: right;

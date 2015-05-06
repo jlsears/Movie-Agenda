@@ -7,7 +7,6 @@ $(document).ready(function() {
 
   // User clicked on a delete button
   $(".deleteButton").click(function () {
-      alert("ajax works");
     var movieItemId = $(this)[0].id;
 
     $.ajax({
