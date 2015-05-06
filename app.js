@@ -22,15 +22,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 var db = require('./db');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var user = require('./routes/users');
 var movie = require('./routes/movie')
 
 
 app.use('/', routes);
-app.use('/user', users);
+app.use('/user', user);
 app.use('/movie', movie);
-
-console.log("hello");
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
