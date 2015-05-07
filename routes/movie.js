@@ -75,7 +75,7 @@ router.get('/', function (req, res) {
 
   // Send the movie form back to the client
   res.render('movieenter', {
-    title: 'Title Here',
+    title: 'Enter a New Film',
     themovie: {
       title: '',
       director: '',
