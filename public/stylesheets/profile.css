@@ -1,0 +1,166 @@
+
+/***********************
+BODY AND HEADER
+***********************/
+
+body {
+  background-color: #3a3a3a;
+}
+
+.header-container {
+
+}
+
+.fashion-up {
+  margin-top: 60px;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.to-right {
+  float: right;
+}
+
+.to-left {
+  float: left;
+}
+
+.space {
+  margin-right: 80px;
+  font-size: 24px;
+}
+
+.spread-out {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#headerWrapper {
+  color: #D6D6D6;
+}
+
+.no-background {
+  background-image: none !important;
+}
+
+#header {
+  position: relative;
+}
+
+.top-bar {
+  line-height: 45px;
+  position: relative;
+  padding: 20px 35px 10px 35px;
+}
+
+nav .top-bar {
+  background-color: white;
+  padding: 20px 35px 10px 35px;
+  color: #3a3a3a;
+}
+
+
+.top-bar ul {
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.top-bar ul li {
+  display: inline;
+  font-size: 20px;
+}
+
+h1 {
+  color: #COCOCO;
+}
+
+.row {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 61.25em;
+}
+
+div {
+  display: block;
+}
+
+
+.title-area {
+  margin-right: 145px;
+}
+
+li {
+  display: list-item;
+}
+
+
+/*****************************
+BANNER PHOTO
+******************************/
+
+#banner-photo {
+  margin-top: 17px;
+  background-image: url('../images/theater_cropped.jpg');
+  height: 308px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-bottom: 3px solid #DC4C18;
+  background-color: black;
+}
+
+#banner-photo span {
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -48px;
+  width: 96px;
+  height: 96px;
+  background-color: white;
+  border-radius: 48px;
+  padding: 4px;
+  margin-top: 255px;
+}
+
+#banner-photo span p {
+  text-align: center;
+  width: 88px;
+  height: 88px;
+  background-color: #FFC957;
+  line-height: 88px;
+  border-radius: 44px;
+  font-size: 38px;
+  color: white;
+  font-family: 'bebas_neueregular';
+}
+
+/************************
+MAIN CONTENT
+************************/
+
+.content-here {
+  background-color: white;
+  height: 600px;
+}
+
+/************************
+FOOTER
+************************/
+
+#footerWrapp {
+  margin-top: 65px;
+  position: relative;
+}
+
+#topFooter {
+  background-color: #3a3a3a;
+  padding: 50px 0 40px 0;
+}
+
+.footerUl {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
