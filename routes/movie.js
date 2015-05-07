@@ -2,8 +2,22 @@ var UserController = require('../userController');  //gets the current user info
 var express = require('express');
 var router = express.Router();
 var movieList = [];
+
+
 var TheMovie = require('../models/movie');
 var User = require('../models/user');
+
+// Send the error message back to the client
+var sendError = function (req, res, err, message) {
+  res.render("error", {
+    error: {
+      status: 500,
+      stack: JSON.stringify(err.errors)
+    },
+    message: message
+  });
+};
+
 
 
 // B. Send the movie list back to the client
@@ -82,7 +96,7 @@ router.post('/', function (req, res, next) {
   if (req.body.db_id !== "") {
 
     // Find it
-    movieenter.findOne({ _id: req.body.db_id }, function (err, foundmovieenter) {
+    TheMovie.findOne({ _id: req.body.db_id }, function (err, foundmovieenter) {
 
       if (err) {
         sendError(req, res, err, "Could not find that task");
@@ -132,6 +146,46 @@ router.post('/', function (req, res, next) {
   }
 });
 
+router.delete('/', function (req, res) {
+  console.log(req.body.movie_id);
+  TheMovie.find({ _id: req.body.movie_id })
+      .remove(function (err) {
+
+    // Was there an error when removing?
+    if (err) {
+      sendError(req, res, err, "Could not delete the movie");
+
+    // Delete was successful
+    } else {
+      res.send("SUCCESS");
+    }
+  });
+});
+
+
+router.get('/:id', function (req, res) {
+
+  // Is the user logged in?
+  if (UserController.getCurrentUser() === null) {
+    res.redirect("/");
+  }
+
+  TheMovie.find({ _id: req.params.id }, function (err, movie) {
+    var thisMovie = movie[0];
+
+    // Was there an error when retrieving?
+    if (err) {
+      sendError(req, res, err, "Could not find a movie with that id");
+
+    // Find was successful
+    } else {
+      res.render('movieenter', {
+        title : 'Express Todo Example',
+        themovie: thisMovie
+      });
+    }
+  });
+});
 
 module.exports = router;
 
