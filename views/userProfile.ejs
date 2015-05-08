@@ -4,6 +4,7 @@
     <title><%= username %> profile</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
     <link rel='stylesheet' href='/stylesheets/profile.css' />
 
   </head>
@@ -23,15 +24,15 @@
 
     <div class="collapse navbar-collapse nav-dothis" id="bs-example-navbar-collapse-1">
       <div class="space">
-        <ul class="nav navbar-nav space left">
+        <ul class="nav navbar-nav space">
           <li><a href="#">Movie Agenda <span class="sr-only">(current)</span></a></li>
         </ul>
       </div>
       <div>
         <ul class="nav navbar-nav to-right spread-out">
-          <li><a href="#">Enter <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">Profile <span class="sr-only">(current)</span></a></li>
-          <li><a href="#">Notification <span class="sr-only">(current)</span></a></li>
+          <li><a href="/movie/">Enter <span class="sr-only">(current)</span></a></li>
+          <li><a href="/user/profile">Profile <span class="sr-only">(current)</span></a></li>
+          <li><a href="/movie/list">List <span class="sr-only">(current)</span></a></li>
         </ul>
       </div>
       <form class="navbar-form navbar-left" role="search">
@@ -50,10 +51,6 @@
     </span>
   </div>
   <div class="content-here"> 
-    <div> 
-      <a href="/movie">Create a new Movie Agenda</a> | <a href="/movie/list">List Movies</a>
-      <P>
-    </div><!-- nav row --> 
     <div class="row"><!--main body --> 
       <div class="col-md-4" id="left"> <!-- L div --> 
         <div> 
@@ -71,18 +68,18 @@
   </div> 
   <div id="footWrapp">
     <div id="topFooter">
-      <div id="footer" class="row">
-        <div class="columns">
           <div class="row footerNav">
-            <ul class="footerUL">
-              <li>Home</li>
-              <li>Enter</li>
-              <li>Profile</li>
-              <li>Navigation</li>
+            <ul class="footerUl">
+              <li class="reading">Some Recommended Reading:</li>
+            </ul>
+            <ul class="footerUl">
+              <li><a href="http://www.avclub.com">The A.V. Club</a></li>
+              <li><a href="http://www.vulture.com">Vulture</a></li>
+              <li><a href="http://www.pastemagazine.com">Paste</a></li>
+              <li><a href="http://www.imdb.com">IMDB</a></li>
+              <li><a href="http://www.metacritic.com">Metacritic</a></li>
             </ul>
           </div>
-        </div>
-      </div>
     </div>
   </div>
   </body>

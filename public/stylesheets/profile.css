@@ -11,6 +11,11 @@ body {
 
 }
 
+@media (min-width: 768px)
+.navbar {
+   border-radius: 0; 
+}
+
 .fashion-up {
   margin-top: 60px;
   max-width: 50%;
@@ -19,10 +24,6 @@ body {
 
 .to-right {
   float: right;
-}
-
-.to-left {
-  float: left;
 }
 
 .space {
@@ -37,10 +38,6 @@ body {
 
 #headerWrapper {
   color: #D6D6D6;
-}
-
-.no-background {
-  background-image: none !important;
 }
 
 #header {
@@ -70,6 +67,12 @@ nav .top-bar {
   font-size: 20px;
 }
 
+.navbar-default .navbar-nav>li>a {
+  color: #DC4C18;
+  font-size: 17px;
+  font-family: 'Roboto';
+}
+
 h1 {
   color: #COCOCO;
 }
@@ -81,6 +84,7 @@ h1 {
   margin-top: 0;
   margin-bottom: 0;
   max-width: 61.25em;
+  color: #C0C0C0;
 }
 
 div {
@@ -162,5 +166,30 @@ FOOTER
 .footerUl {
   margin: 0;
   padding: 0;
-  list-style: none;
+  list-style-type: none;
+}
+
+.reading {
+  margin-right: 50px;
+}
+
+li {
+  float: left;
+}
+
+.footerUl li a {
+  color: #C0C0C0;
+  display: block;
+  padding: 0 20px;
+  border-right: 1px solid;
+  font-family: 'Roboto';
+}
+
+li a:hover {
+  color: #FEFAC0;
+  text-decoration: none;
+}
+
+.footerUl li:last-child a {
+  border-right: none;
 }
