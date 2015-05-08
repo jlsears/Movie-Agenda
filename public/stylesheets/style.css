@@ -4,7 +4,11 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: #805E33;
+}
+
+a:hover{
+  color: #805E33;
 }
 
 h1 {
