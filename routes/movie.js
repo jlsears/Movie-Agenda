@@ -107,8 +107,9 @@ router.post('/', function (req, res, next) {
         foundmovieenter.theater = req.body.theater;
         foundmovieenter.moviegoers = req.body.fellow_moviegoers;
         foundmovieenter.rating = req.body.rating;
+        foundmovieenter.genre = req.body.genre;
         foundmovieenter.date_seen = req.body.date_seen;
-        foundmovieenter.favorite = (req.body.complete) ? req.body.favorite : false;
+        foundmovieenter.favorite = (req.body.favorite) ? req.body.favorite : false;
 
         // Save the updated item.
         foundmovieenter.save(function (err, newOne) {

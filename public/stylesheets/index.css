@@ -1,8 +1,7 @@
 html,body,.film { height: 100%; }
 
 body {
-  background-color: #FFFFFF; /*#805E33/
-  /*background-size: cover;*/
+  background-color: #FFFFFF; /*#805E33*/
   color: #FFFFFF;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -91,7 +90,7 @@ input {
   text-align: center;
   width: 88px;
   height: 88px;
-  margin-top: -135px;
+  margin-top: -95px;
   background-color: #FFC957;
   line-height: 88px;
   border-radius: 44px;
@@ -104,6 +103,6 @@ input {
   color: black;
   text-align: center;
   position: absolute;
-  margin-top: 75px;
-  margin-left: 275px;
+  margin-top: 250px;
+  margin-left: 285px;
 }

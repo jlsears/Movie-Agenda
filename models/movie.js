@@ -9,6 +9,7 @@ var movieSchema = mongoose.Schema({
     date_viewed: {type: Date, required: false, default: Date.now },
     seen: {type: Boolean, required: true, default: Date.now },
     favorite: {type: Boolean, required: true, default: false },
+    rating: {type: String, required: false, default: '' },
     user: {type: String, required: true}
 });
 

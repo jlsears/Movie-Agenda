@@ -3,69 +3,73 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/profile.css' />
+       <link rel='stylesheet' href='/stylesheets/movieEnter.css' />
   </head>
   <body>
-    <h1>Enter a New Film</h1>
-    <div class="entering-data">
-      <form method="POST" action="/movie" id="movieForm">
+      <div class="entering-data">
+      <h1>Enter a New Film</h1>
+        <form method="POST" action="/movie" id="movieForm">
 
-        <input type="hidden" name="db_id" value="<%= themovie._id %>">
+          <input type="hidden" name="db_id" value="<%= themovie._id %>">
 
-        <div class="formfield sides-cat">
-          <div class="formfield--prompt">Title:</div>
-          <input type="text" id="meTitle" name="title" value="<%= themovie.title %>">
-        </div>
+          <div class="formfield sides-cat">
+            <div class="formfield--prompt">Title:</div>
+            <input type="text" id="meTitle" name="title" value="<%= themovie.title %>">
+          </div>
 
-        <div class="formfield">
-          <div class="formfield--prompt">Director:</div>
-          <textarea id="meDirector" name="director"><%= themovie.director %></textarea>
-        </div>
+          <div class="formfield">
+            <div class="formfield--prompt">Director:</div>
+            <textarea id="meDirector" name="director"><%= themovie.director %></textarea>
+          </div>
 
-        <div class="formfield">
-          <div class="formfield--prompt">Genre:</div>
-          <input type="text" id="meGenre" name="genre" value="<%= themovie.genre %>">
-        </div>
+          <div class="formfield">
+            <div class="formfield--prompt">Genre:</div>
+            <input type="text" id="meGenre" name="genre" value="<%= themovie.genre %>">
+          </div>
 
-        <div class="formfield">
-          <div class="formfield--prompt">Theater:</div>
-          <input type="text" id="meTheater" name="theater" value="<%= themovie.theater %>">
-        </div>
+          <div class="formfield">
+            <div class="formfield--prompt">Theater:</div>
+            <input type="text" id="meTheater" name="theater" value="<%= themovie.theater %>">
+          </div>
 
-        <div class="formfield">
-          <div class="formfield--prompt">Fellow Moviegoers:</div>
-          <input type="text" id="meMoviegoers" name="moviegoers" value="<%= themovie.fellow_moviegoers %>">
-        </div>
+          <div class="formfield">
+            <div class="formfield--prompt">Fellow Moviegoers:</div>
+            <input type="text" id="meMoviegoers" name="fellow_moviegoers" value="<%= themovie.fellow_moviegoers %>">
+          </div>
 
-        <div class="formfield">
-          <div class="formfield--prompt">Date Viewed:</div>
-          <input type="text" id="meDate"
-            name="date_seen"
-            value="">
-        </div>
+          <div class="formfield">
+            <div class="formfield--prompt">Date Viewed:</div>
+            <input type="text" id="meDate"
+              name="date_seen"
+              value="">
+          </div>
 
-       <!--  <div class="btn-group">
-          <button type="menu" menu="dropdown-menu">Have Seen or To See:</button>
-          <menu type="context" id="dropdown-menu" name="whetherSeen">
-            <menuitem label="Blank">
-            <menuitem label="Have Seen">
-            <menuitem label="To See">
-          </menu>
-        </div> -->
+         <!--  <div class="btn-group">
+            <button type="menu" menu="dropdown-menu">Have Seen or To See:</button>
+            <menu type="context" id="dropdown-menu" name="whetherSeen">
+              <menuitem label="Blank">
+              <menuitem label="Have Seen">
+              <menuitem label="To See">
+            </menu>
+          </div> -->
 
-        <div class="formfield">
-          <div class="formfield--prompt">Rating:</div>
-          <input type="text" id="meRating" name="rating" value="<%= themovie.rating %>">
-        </div>
+          <div class="formfield">
+            <div class="formfield--prompt">Rating:</div>
+            <input type="text" id="meRating" name="rating" value="<%= themovie.rating %>">
+          </div>
 
-        <div class="formfield">
-          <div class="formfield--prompt">Favorite:</div>
-          <input type="checkbox" id="meFavorite" name="favorite">
-        </div>
+          <div class="formfield">
+            <div class="formfield--prompt">Favorite:</div>
+            <input type="checkbox" id="meFavorite" name="favorite">
+          </div>
 
+        <input class="submitButton center-it" type="submit"></input>
+        </form>
+      </div>
     </div>
-      <input class="submitButton center-it" type="submit"></input>
-      </form>
-    </div>
+
+
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
   </body>
 </html>
