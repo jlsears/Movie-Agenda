@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= username %> profile</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
+    <link rel='stylesheet' href='/stylesheets/profile.css' />
+
+  </head>
+  <body>
+
+<div class="fashion-up">
+  <nav class="navbar navbar-default nav-container">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse nav-dothis" id="bs-example-navbar-collapse-1">
+      <div class="space">
+        <ul class="nav navbar-nav space">
+          <li><a href="#">Movie Agenda <span class="sr-only">(current)</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="nav navbar-nav to-right spread-out">
+          <li><a href="/movie/">Enter <span class="sr-only">(current)</span></a></li>
+          <li><a href="/user/profile">Profile <span class="sr-only">(current)</span></a></li>
+          <li><a href="/movie/list">List <span class="sr-only">(current)</span></a></li>
+        </ul>
+      </div>
+      <form class="navbar-form navbar-left" role="search">
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+
+  <!-- </div> -->
+  <div id="banner-photo">
+    <span>
+      <p>U</p>
+    </span>
+  </div>
+  <div class="content-here"> 
+    <div class="row"><!--main body --> 
+      <div class="col-md-4" id="left"> <!-- L div --> 
+        <div> 
+          <i class="fa fa-user"></i>
+            Username: <%= username %>
+        </div> 
+        <div>
+          <i class="fa fa-film"></i>
+            Number of Movie Agendas: <%= movies.length %>
+        </div> 
+      </div><!--L div --> 
+      <div class="col-md-8" id="right"> 
+      </div><!--R div --> 
+    </div><!--main body -->
+  </div> 
+  <div id="footWrapp">
+    <div id="topFooter">
+          <div class="row footerNav">
+            <ul class="footerUl">
+              <li class="reading">Some Recommended Reading:</li>
+            </ul>
+            <ul class="footerUl">
+              <li><a href="http://www.avclub.com">The A.V. Club</a></li>
+              <li><a href="http://www.vulture.com">Vulture</a></li>
+              <li><a href="http://www.pastemagazine.com">Paste</a></li>
+              <li><a href="http://www.imdb.com">IMDB</a></li>
+              <li><a href="http://www.metacritic.com">Metacritic</a></li>
+            </ul>
+          </div>
+    </div>
+  </div>
+  </body>
+</html>
