@@ -39,6 +39,7 @@ h1 {
   -moz-background-size: cover;
   -o-background-size: cover;
   border-bottom: 3px solid #DC4C18;
+  /* add div circle then div with at 50% try z-index*/
 }
 
 #login {
@@ -80,7 +81,7 @@ input {
   margin-left: -48px;
   width: 96px;
   height: 96px;
-  background-color: white;
+  /*background-color: white;*/
   border-radius: 48px;
   padding: 4px;
   margin-top: 255px;
@@ -106,3 +107,35 @@ input {
   margin-top: 250px;
   margin-left: 285px;
 }
+
+/*.line{
+   border-bottom: solid 3px #DC4C18;
+   height: 48px;
+   z-index: 1;
+}
+
+.circle{
+   height: 96px;
+   width: 96px;
+   border-radius: 50%;
+   border: 2px solid #FFC957;
+   background-color: #FFC957;
+   z-index: 2;
+   text-align: center;
+   margin: 0 auto;
+}
+
+.circle p {
+  text-align: center;
+  width: 88px;
+  height: 88px;
+  margin-top: -95px;
+  background-color: #FFC957;
+  line-height: 88px;
+  border-radius: 44px;
+  font-size: 38px;
+  color: white;
+  font-family: 'bebas_neueregular';
+
+}
+*/
