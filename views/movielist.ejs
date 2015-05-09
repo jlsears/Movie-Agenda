@@ -3,21 +3,64 @@
   <head>
     <title><%= title %></title>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
+      <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Hind">
+
+    <link rel='stylesheet' href='/stylesheets/movielist.css' />
   </head>
   <body>
-    <a class="direction" href="/movie">Enter a new movie</a>
-    <a class="direction" href="/user/profile">View your Profile</a>
+  <div class="fashion-up">
+  <nav class="navbar navbar-default nav-container">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
 
+    <div class="collapse navbar-collapse nav-dothis" id="bs-example-navbar-collapse-1">
+      <div class="space">
+        <ul class="nav navbar-nav space">
+          <li><a href="#">Movie Agenda <span class="sr-only">(current)</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <ul class="nav navbar-nav to-right spread-out">
+          <li><a href="/movie/">Enter <span class="sr-only">(current)</span></a></li>
+          <li><a href="/user/profile">Profile <span class="sr-only">(current)</span></a></li>
+          <li><a href="/movie/list">List <span class="sr-only">(current)</span></a></li>
+        </ul>
+      </div>
+      <form class="navbar-form navbar-left" role="search">
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
 
-    <h2><%= welcome %></h2>
-    <h1><%= message %></h1>
-    <table class="table">
+  <!-- </div> -->
+  <div id="banner-photo">
+    <span>
+      <p>L</p>
+    </span>
+  </div>
+<div class="content-here">
+  <div class="welcome-info">
+    <p><%= welcome %></p>
+    <p><%= message %></p>
+  </div>
+    <table class="table table-whole">
       <thead>
           <tr>
               <th data-field="title">Title</th>
               <th data-field="director">Director</th>
+              <th data-field="director">Genre</th>
               <th data-field="theater">Theater</th>
               <th data-field="moviegoers">Fellow Moviegoers</th>
               <th data-field="date_seen">Date Viewed</th>
@@ -33,6 +76,7 @@
           <tr id="movie_<%= currentMovie._id %>">
             <td><%= currentMovie.title %></td>
             <td><%= currentMovie.director %></td>
+            <td><%= currentMovie.genre %></td>
             <td><%= currentMovie.theater %></td>
             <td><%= currentMovie.moviegoers %></td>
             <td><%= currentMovie.date_seen %></td>
@@ -44,7 +88,23 @@
         <% } %>
       </tbody>
       </table>
-
+    <div id="footWrapp">
+    <div id="topFooter">
+          <div class="row footerNav">
+            <ul class="footerUl">
+              <li class="reading">Some Recommended Reading:</li>
+            </ul>
+            <ul class="footerUl">
+              <li><a href="http://www.avclub.com">The A.V. Club</a></li>
+              <li><a href="http://www.vulture.com">Vulture</a></li>
+              <li><a href="http://www.pastemagazine.com">Paste</a></li>
+              <li><a href="http://www.imdb.com">IMDB</a></li>
+              <li><a href="http://www.metacritic.com">Metacritic</a></li>
+            </ul>
+          </div>
+    </div>
+  </div>
+</div>
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="/javascripts/movieHandler.js"></script>

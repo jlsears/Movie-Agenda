@@ -47,25 +47,56 @@
   <!-- </div> -->
   <div id="banner-photo">
     <span>
-      <p>U</p>
+      <p>P</p>
     </span>
   </div>
+
+
   <div class="content-here"> 
-    <div class="row"><!--main body --> 
-      <div class="col-md-4" id="left"> <!-- L div --> 
-        <div> 
+    <div class="content-holder">    
+      <div class="to-left">
+        <p>Remember some of your favorites...</p>
+        <table class="table table-whole">
+          <thead>
+            <tr>
+              <th data-field="title">Title</th>
+              <th data-field="director">Director</th>
+              <th data-field="theater">Theater</th>
+              <th data-field="rating">Rating</th>
+              <th data-field="favorite">Favorite</th>
+          </tr>
+      </thead>
+      <tbody>
+        <% for (var m = 0; m < 5; m++) { %>
+        <% var currentMovie = movies[m]; %>
+          <tr id="movie_<%= currentMovie._id %>">
+            <td><%= currentMovie.title %></td>
+            <td><%= currentMovie.director %></td>
+            <td><%= currentMovie.theater %></td>
+            <td><%= currentMovie.rating %></td>
+            <td><%= currentMovie.favorite %></td>
+          </tr>
+        <% } %>
+      </tbody>
+      </table>
+      </div>
+      <div class="tr-right"> 
+        <div class="yr-details">
+          <p>Your Details</p>
+        </div>
+        <div class="push-down"> 
           <i class="fa fa-user"></i>
             Username: <%= username %>
         </div> 
         <div>
           <i class="fa fa-film"></i>
-            Number of Movie Agendas: <%= movies.length %>
+            Number of Movies Noted: <%= movies.length %>
         </div> 
-      </div><!--L div --> 
-      <div class="col-md-8" id="right"> 
-      </div><!--R div --> 
-    </div><!--main body -->
+      </div>
+    </div>
   </div> 
+  
+
   <div id="footWrapp">
     <div id="topFooter">
           <div class="row footerNav">

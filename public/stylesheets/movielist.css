@@ -146,40 +146,29 @@ MAIN CONTENT
 
 .content-here {
   background-color: white;
-  height: 600px;
 }
 
-.content-holder {
-  padding-top: 100px;
+.welcome-info {
+  font-size: 24px;
+  margin-left: 30px;
+  padding-top: 30px;
+  font-family: 'Hind';
+}
+
+.table-whole {
   max-width: 70%;
   margin: 0 auto;
+  margin-top: 90px;
+  margin-bottom: 90px;
 }
 
-.to-left {
-  float: left;
+table a {
+  color: #DC4C18;
 }
 
-.tr-right {
-  float: right;
-  margin-right: 300px;
-}
-
-.to-left p {
-  border-bottom: solid;
-  border-width: 1px;
-  margin-bottom: 15px;
-  font-size: 20px;
-}
-
-.yr-details p {
-  border-bottom: solid;
-  border-width: 1px;
-  margin-bottom: 15px;
-  font-size: 20px;
-}
-
-.push-down {
-  margin-bottom: 20px;
+table a:hover {
+  color: #FFC957;
+  text-decoration: none;
 }
 
 

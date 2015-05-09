@@ -43,7 +43,7 @@ var sendMovieList = function (req, res, next) {
     } else {
       res.render("movielist", {
         title: "List of movies",
-        message: "Look at what you've been up to here",
+        message: "Just look at what you've been up to here," + " " + theUser.username + "...",
         welcome: "Welcome, film fan!",
         movies: movies
       });
@@ -105,7 +105,7 @@ router.post('/', function (req, res, next) {
         foundmovieenter.title = req.body.title;
         foundmovieenter.director = req.body.director;
         foundmovieenter.theater = req.body.theater;
-        foundmovieenter.moviegoers = req.body.moviegoers;
+        foundmovieenter.moviegoers = req.body.fellow_moviegoers;
         foundmovieenter.rating = req.body.rating;
         foundmovieenter.date_seen = req.body.date_seen;
         foundmovieenter.favorite = (req.body.complete) ? req.body.favorite : false;
