@@ -5,29 +5,72 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/index.css' />
   </head>
-  <body class="film">
+  <body>
+    <div class="container-fluid film" >
 
-    <h1><%= title %></h1>
+      <nav class="navbar navbar-default">
 
-    <div class="film" ></div>
-      <p>Welcome to <%= title %> <i class="fa fa-film fa-2x"></i></p>
-      <a href="/user/profile">View profile</a> | <a href="/user/logout">Logout</a>
-       <h3>Please log in below or  <a href="/user/register">register</a> for a new account</h3>
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Movie Agenda:</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Log in <span class="sr-only">(current)</span></a></li>
+              <li><a href="#">Review your List</a></li>
+          </div><!-- /.navbar-collapse -->
+
+      </nav>
 
 
-    <form method="POST" action="/user/login" id="loginForm">
-    	<div class="formfield">
-        <div class="formfield--prompt"> <i class="fa fa-user"></i> Username:
-        </div>
-        <input type="text" id="username" name="username">
-        </div>
-      <div class="formfield">
-        <div class="formfield--prompt"><i class="fa fa-key fa-fw"></i> Password:</div>
-        <input type="password" id="password" name="password">
+
+
+      <div id="login">
+          <p>Welcome to <%= title %> <i class="fa fa-film fa-2x"></i></p>
+
+          <a href="/user/profile">View profile</a> | <a href="/user/logout">Logout</a>
+          <h4>Please log in below or  <a href="/user/register">register</a> for a new account. </h4>
+
+          <form method="POST" action="/user/login" id="loginForm">
+            <div class="formfield">
+              <div class="formfield--prompt"> <i class="fa fa-user"></i> Username:
+              </div>
+              <input type="text" id="username" name="username">
+              </div>
+            <div class="formfield">
+              <div class="formfield--prompt"><i class="fa fa-key fa-fw"></i> Password:</div>
+              <input type="password" id="password" name="password">
+            </div>
+            <P><P>
+            <input class="btn btn-default btn-sm" type="submit">
+            <P>
+          </form>
+      </div><!--login end-->
+
+      <div><P><P>
       </div>
-      <input class="btn btn-default btn-sm" type="submit"></input>
-    </form>
+
+        <div id="banner-photo">
+          <span>
+            <p>MA</p>
+          </span>
+        </div>
+
+    </div ><!--film  end -->
+
+    <div  id="title_holder">
+         <h1 id="splash_title"><%= title %></h1>
+    </div>
 
   </body>
 </html>
