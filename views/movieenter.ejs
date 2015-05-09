@@ -2,11 +2,55 @@
 <html>
   <head>
     <title><%= title %></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel='stylesheet' href='/stylesheets/profile.css' />
-       <link rel='stylesheet' href='/stylesheets/movieEnter.css' />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">
+    <link rel='stylesheet' href='/stylesheets/movieEnter.css' />
   </head>
   <body>
+
+  <div class="fashion-up">
+  <nav class="navbar navbar-default nav-container">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse nav-dothis" id="bs-example-navbar-collapse-1">
+        <div class="space">
+          <ul class="nav navbar-nav space">
+            <li><a href="#">Movie Agenda <span class="sr-only">(current)</span></a></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="nav navbar-nav to-right spread-out">
+            <li><a href="/movie/">Enter <span class="sr-only">(current)</span></a></li>
+            <li><a href="/user/profile">Profile <span class="sr-only">(current)</span></a></li>
+            <li><a href="/movie/list">List <span class="sr-only">(current)</span></a></li>
+          </ul>
+        </div>
+        <form class="navbar-form navbar-left" role="search">
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+        </ul>
+      </div>
+    </div>
+  </nav>
+  </div>
+
+    <!-- </div> -->
+    <div id="banner-photo">
+      <span>
+        <p>E</p>
+      </span>
+    </div>
+    <div class="content-here">
       <div class="entering-data">
       <h1>Enter a New Film</h1>
         <form method="POST" action="/movie" id="movieForm">
@@ -45,15 +89,6 @@
               value="">
           </div>
 
-         <!--  <div class="btn-group">
-            <button type="menu" menu="dropdown-menu">Have Seen or To See:</button>
-            <menu type="context" id="dropdown-menu" name="whetherSeen">
-              <menuitem label="Blank">
-              <menuitem label="Have Seen">
-              <menuitem label="To See">
-            </menu>
-          </div> -->
-
           <div class="formfield">
             <div class="formfield--prompt">Rating:</div>
             <input type="text" id="meRating" name="rating" value="<%= themovie.rating %>">
@@ -68,9 +103,10 @@
         </form>
       </div>
     </div>
+  </div>
 
 
-    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
   </body>
 </html>
 
